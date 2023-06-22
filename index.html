@@ -3,27 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TechCrunch</title>
-    <link rel="icon" type="image/x-icon" href="./assets/favicon.webp" />
+    <title>Tech Crunch</title>
+    <link rel="icon" type="image/x-icon" href="/public/favicon.webp" />
     <link rel="stylesheet" href="./css/style.css" />
     <link
       rel="stylesheet"
       href="path/to/font-awesome/css/font-awesome.min.css"
     />
   </head>
-  <body class="bodyWrapper">
-    <div class="wrapper">
-      <!-- sidebar  -->
-      <navbar class="nav-wrapper">
+  <body>
+    <div class="flex">
+      <!-- navbar  -->
+      <navbar class="flex-12 nav-wrapper">
         <!-- logo  -->
-        <img src="./assets/logo.png" alt="" class="logo" />
+        <img src="/public/logo.png" alt="logo" class="logo" />
 
         <div class="nav-headings">
           <h2 class="nav-heading-join">Join TechCrunch+</h2>
           <p class="nav-heading-login">Login</p>
         </div>
 
-        <div class="nav-links">
+        <div class="flex flex-col nav-links">
           <li>Search</li>
           <li>TechCrunch+</li>
           <li>Startups</li>
@@ -33,194 +33,203 @@
           <li>Apps</li>
           <li>Events</li>
           <li>More</li>
+          <label class="toggle switch" onclick="myFunction()">
+            <input type="checkbox" />
+            <span class="slider round"></span>
+          </label>
+          <!-- <button class="toggle" onclick="myFunction()">Toggle</button> -->
         </div>
       </navbar>
-      <!-- sidebar ends  -->
+      <!-- navbar ends  -->
 
-      <!-- 2nd container  -->
-      <div class="content-wrapper">
+      <!-- center-container  -->
+      <div class="flex flex-col flex-85 content-wrapper">
         <!-- row-one  -->
-        <div class="row-one-wrapper">
-          <div class="row-one-col-one">
-            <h1>
+        <div class="flex margin-one-y row-one-wrapper">
+          <div class="flex-col auto-center row-one-col-one gray-hover">
+            <h1 class="heading">
               Ransomware gang lists first victims of MOVEit mass-hacks,
               including US banks and universities
             </h1>
 
-            <p>
+            <p class="paragraph">
               Researchers say the newly discovered security flaw was exploited
               as far back as 2021
             </p>
 
-            <b>Carly Page</b>
-            <img src="./assets/ransomware-moshed.webp" alt="" />
+            <b class="margin-one-y">Carly Page</b>
+            <img
+              src="./assets/ransomware-moshed.webp"
+              alt=""
+              class="hero-image"
+            />
           </div>
 
           <div class="row-one-col-two">
-            <div class="individual-container">
-              <tag>Social</tag>
-              <h1>
+            <div class="individual-container gray-hover">
+              <tag class="green">Social</tag>
+              <h1 class="heading-sub">
                 Twitter is being evicted from its Boulder office over unpaid
                 rent
               </h1>
-              <p>Devin Coldewey</p>
+              <p class="author">Devin Coldewey</p>
 
-              <div class="break"></div>
+              <div class="break-short"></div>
             </div>
 
-            <div class="individual-container">
-              <tag>Gaming</tag>
-              <h1>
+            <div class="individual-container gray-hover">
+              <tag class="green">Gaming</tag>
+              <h1 class="heading-sub">
                 Wargraphs, a gaming startup with only one employee and no
                 outside funding, sells for $54M
               </h1>
-              <p>Ingrid Lunden</p>
+              <p class="author">Ingrid Lunden</p>
 
-              <div class="break"></div>
+              <div class="break-short"></div>
             </div>
 
-            <div class="individual-container">
-              <tag>Market Analysis</tag>
-              <h1>
+            <div class="individual-container gray-hover">
+              <tag class="green">Market Analysis</tag>
+              <h1 class="heading-sub">
                 Why every EV charging network combined can’t compete with Tesla
               </h1>
-              <p>Tim De Chant</p>
+              <p class="author">Tim De Chant</p>
 
-              <div class="break"></div>
+              <div class="break-short"></div>
             </div>
 
-            <div class="individual-container">
-              <tag>Apps</tag>
-              <h1>
+            <div class="individual-container gray-hover">
+              <tag class="green">Apps</tag>
+              <h1 class="heading-sub">
                 Hundreds of subreddits plan to go dark indefinitely after Reddit
                 CEO’s internal memo
               </h1>
-              <p>Ivan Mehta</p>
+              <p class="author">Ivan Mehta</p>
 
-              <div class="break"></div>
+              <div class="break-short"></div>
             </div>
           </div>
 
           <div class="row-one-col-three">
             <div class="meet-container">
               <div class="detail-container">
-                <h3>TechCrunch Disrupt</h3>
+                <h3 class="table-heading">TechCrunch Disrupt</h3>
                 <div class="detail-container-date">
                   <p>Sept 19-21 San</p>
                   <p>Francisco, CA</p>
                 </div>
               </div>
 
-              <p class="register">Register Now</p>
+              <p class="register flex absolute-center green-bg-hover">
+                Register Now
+              </p>
             </div>
           </div>
         </div>
         <!-- row-one ends  -->
 
-        <!-- 2nd row  -->
         <div class="row-two-wrapper">
           <!-- data-one  -->
-          <div class="row-two-container">
+          <div class="flex margin-one-y gap-one row-two-container">
             <!-- col-1  -->
-            <div class="row-two-col-1">
-              <tag>Biotech</tag>
-              <h1>
+            <div class="flex-35 row-two-col-1">
+              <tag class="green">Biotech</tag>
+              <h1 class="heading-sub">
                 Investors say they have uncovered financial irregularities at
                 Mojocare
               </h1>
 
-              <div class="row-two-details">
+              <div class="author row-two-details">
                 <h4>Kyle Wiggers</h4>
-                <p>12:30 PM GMT+5:30•June 19, 2023</p>
+                <p class="margin-half-y">12:30 PM GMT+5:30•June 19, 2023</p>
               </div>
             </div>
 
             <!-- col-2  -->
-            <div class="row-two-col-2">
+            <div class="flex-35 text-gray row-two-col-2">
               Màrius Montmany and Oriol Hernandez i Fajula, former employees at
               large logistics companies, several years ago found themselves
               frustrated with the problem of “reverse logistics” ̵...
             </div>
 
             <!-- col-3  -->
-            <!-- <div class="row-two-col-3"> -->
-            <img src="./assets/imgOne.webp" alt="" />
-            <!-- </div> -->
+
+            <img src="./assets/imgOne.webp" alt="" class="img-second" />
           </div>
 
           <!-- break line -->
-          <div class="break-line"></div>
+          <div class="break-short"></div>
 
           <!-- data-one  -->
-          <div class="row-two-container">
+          <div class="flex margin-one-y gap-one row-two-container">
             <!-- col-1  -->
-            <div class="row-two-col-1">
-              <tag>Venture</tag>
-              <h1>
+            <div class="flex-35 row-two-col-1">
+              <tag class="green">Venture</tag>
+              <h1 class="heading-sub">
                 Seedstars, Fondation Botnar launch new fund to back African
                 startups focused on youth wellbeing
               </h1>
 
-              <div class="row-two-details">
+              <div class="author row-two-details">
                 <h4>Kyle Wiggers</h4>
-                <p>12:30 PM GMT+5:30•June 19, 2023</p>
+                <p class="margin-half-y">12:30 PM GMT+5:30•June 19, 2023</p>
               </div>
             </div>
 
             <!-- col-2  -->
-            <div class="row-two-col-2">
+            <div class="flex-35 text-gray row-two-col-2">
               Seedstars Capital and Swiss philanthropic foundation Fondation
               Botnar have launched Seedstars Youth Wellbeing Ventures, a $20
               million investment mandate targeting early-stage startups in
             </div>
 
             <!-- col-3  -->
-            <!-- <div class="row-two-col-3"> -->
-            <img src="./assets/imageTwo.webp" alt="" />
-            <!-- </div> -->
+
+            <img src="./assets/imageTwo.webp" alt="" class="img-second" />
           </div>
 
           <!-- break line -->
-          <div class="break-line"></div>
+          <div class="break-short"></div>
 
           <!-- data-one  -->
-          <div class="row-two-container">
+          <div class="flex margin-one-y gap-one row-two-container">
             <!-- col-1  -->
-            <div class="row-two-col-1">
-              <tag>Biotech</tag>
-              <h1>
+            <div class="flex-35 row-two-col-1">
+              <tag class="green">Biotech</tag>
+              <h1 class="heading-sub">
                 Mercedes jumps into the ChatGPT fray and Toyota plays catch-up
               </h1>
 
-              <div class="row-two-details">
+              <div class="author row-two-details">
                 <h4>Kyle Wiggers</h4>
-                <p>12:30 PM GMT+5:30•June 19, 2023</p>
+                <p class="margin-half-y">12:30 PM GMT+5:30•June 19, 2023</p>
               </div>
             </div>
 
             <!-- col-2  -->
-            <div class="row-two-col-2">
+            <div class="flex-35 text-gray row-two-col-2">
               The Station is a weekly newsletter dedicated to all things
               transportation. Sign up here — just click The Station — to receive
               the full edition of the newsletter every weekend in your inbox.
             </div>
 
             <!-- col-3  -->
-            <!-- <div class="row-two-col-3"> -->
-            <img src="./assets/imageThree.webp" alt="" />
-            <!-- </div> -->
+
+            <img src="./assets/imageThree.webp" alt="" class="img-second" />
           </div>
 
           <!-- break line -->
-          <div class="break-line"></div>
+          <div class="break-short"></div>
         </div>
         <!-- 2nd row ends  -->
 
         <!-- 3rd row  -->
-        <div class="row-techcrunch-label">
+        <div
+          class="width-80 flex justify-space-around items-center green-linear-bg row-techcrunch-label"
+        >
           <img src="./assets/white-logo.jpeg" alt="" />
-          <div class="techcrunch-label-headings">
-            <h3>TechCrunch Disrupt 2020</h3>
+          <div class="margin-one-y techcrunch-label-headings">
+            <h3 class="label-heading">TechCrunch Disrupt 2020</h3>
             <p>Sept 19-21</p>
           </div>
 
@@ -230,12 +239,15 @@
           </p>
           <p>TechCrunch Disrupt</p>
         </div>
-        <!-- 3rd row ends  -->
 
-        <footer>
-          <div class="footer-wrapper">
-            <div class="footer-container-one">
-              <div class="footer-info-col">
+        <!-- label ends  -->
+
+        <footer class="padding-cmn">
+          <div class="flex gap-4 footer-wrapper">
+            <div class="flex gap-7 footer-container-one">
+              <div
+                class="flex flex-col gap-one footer-info-col list-style-none"
+              >
                 <h4>About</h4>
                 <li>TechCrunch</li>
                 <li>Staff</li>
@@ -245,7 +257,9 @@
                 <li>Site Maps</li>
               </div>
 
-              <div class="footer-info-col">
+              <div
+                class="flex flex-col gap-one footer-info-col list-style-none"
+              >
                 <h4>Legal</h4>
                 <li>Terms of Service</li>
                 <li>Privacy Policy</li>
@@ -255,16 +269,18 @@
                 <li>About Our Ads</li>
               </div>
 
-              <div class="footer-info-col">
+              <div
+                class="flex flex-col gap-one footer-info-col list-style-none"
+              >
                 <h4>Trending Tech Topics</h4>
                 <li>Tech Layoffs</li>
                 <li>ChatGPT</li>
               </div>
             </div>
 
-            <div class="footer-container-two">
-              <div class="footer-socials">
-                <div class="socials">
+            <div class="flex gap-4 footer-container-two">
+              <div class="flex flex-col gap-one footer-socials">
+                <div class="flex absolute-center gap-one socials">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     height="1em"
@@ -277,7 +293,7 @@
                   <p>Facebook</p>
                 </div>
 
-                <div class="socials">
+                <div class="flex absolute-center gap-one socials">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     height="1em"
@@ -290,7 +306,7 @@
                   <p>Youtube</p>
                 </div>
 
-                <div class="socials">
+                <div class="flex absolute-center gap-one socials">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     height="1em"
@@ -304,8 +320,8 @@
                 </div>
               </div>
 
-              <div class="footer-socials">
-                <div class="socials">
+              <div class="flex flex-col gap-one footer-socials">
+                <div class="flex absolute-center gap-one socials">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     height="1em"
@@ -318,7 +334,7 @@
                   <p>Twitter</p>
                 </div>
 
-                <div class="socials">
+                <div class="flex absolute-center gap-one socials">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     height="1em"
@@ -331,7 +347,7 @@
                   <p>Instagram</p>
                 </div>
 
-                <div class="socials">
+                <div class="flex absolute-center gap-one socials">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     height="1em"
@@ -349,18 +365,17 @@
           <p class="copyright">
             © 2023 Yahoo.All rights reserved.Powered by
             <a
+              class="text-decoration underline-hover text-gray"
               href="https://wpvip.com/?utm_source=vip_powered_wpcom&utm_medium=web&utm_campaign=VIP%20Footer%20Credit%2F"
               >WordPress VIP</a
             >
           </p>
         </footer>
+
+        <!-- center-container ends  -->
       </div>
-      <!-- 2nd container ends  -->
     </div>
 
-    <script
-      src="https://kit.fontawesome.com/yourcode.js"
-      crossorigin="anonymous"
-    ></script>
+    <script src="./js/script.js"></script>
   </body>
 </html>
