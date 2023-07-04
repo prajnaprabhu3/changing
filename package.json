@@ -1,9 +1,5 @@
 {
-  "scripts": {
-    "watch:scss": "node-sass -w styles/style.scss css/style.css"
-  },
   "dependencies": {
-    "node-sass": "^9.0.0",
-    "react-icons": "^4.9.0"
+    "lodash": "^4.17.21"
   }
 }

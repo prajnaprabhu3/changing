@@ -3,369 +3,40 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>TechCrunch</title>
-    <link rel="icon" type="image/x-icon" href="./assets/favicon.webp" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
     <link
       rel="stylesheet"
-      href="path/to/font-awesome/css/font-awesome.min.css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href=" https://cdn.datatables.net/1.13.4/css/jquery.dataTables.min.css"
     />
   </head>
-  <body>
+  <body onload="getData()">
     <div class="wrapper">
-      <!-- sidebar  -->
-      <navbar class="nav-wrapper">
-        <!-- logo  -->
-        <img src="./assets/logo.png" alt="" class="logo" />
+      <table class="'table table-striped" id="userTable">
+        <thead>
+          <th>Post ID</th>
+          <th>ID</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Body</th>
+        </thead>
 
-        <div class="nav-headings">
-          <h2 class="nav-heading-join">Join TechCrunch+</h2>
-          <p class="nav-heading-login">Login</p>
-        </div>
-
-        <div class="nav-links">
-          <li>Search</li>
-          <li>TechCrunch+</li>
-          <li>Startups</li>
-          <li>Venture</li>
-          <li>AI</li>
-          <li>Crypto</li>
-          <li>Apps</li>
-          <li>Events</li>
-          <li>More</li>
-          <label class="toggle switch" onclick="myFunction()">
-            <input type="checkbox" />
-            <span class="slider round"></span>
-          </label>
-        </div>
-      </navbar>
-      <!-- sidebar ends  -->
-
-      <!-- 2nd container  -->
-      <div class="content-wrapper">
-        <!-- row-one  -->
-        <div class="row-one-wrapper">
-          <div class="row-one-col-one">
-            <h1>
-              Ransomware gang lists first victims of MOVEit mass-hacks,
-              including US banks and universities
-            </h1>
-
-            <p>
-              Researchers say the newly discovered security flaw was exploited
-              as far back as 2021
-            </p>
-
-            <b>Carly Page</b>
-            <img src="./assets/ransomware-moshed.webp" alt="" />
-          </div>
-
-          <div class="row-one-col-two">
-            <div class="individual-container">
-              <tag>Social</tag>
-              <h1>
-                Twitter is being evicted from its Boulder office over unpaid
-                rent
-              </h1>
-              <p>Devin Coldewey</p>
-
-              <div class="break"></div>
-            </div>
-
-            <div class="individual-container">
-              <tag>Gaming</tag>
-              <h1>
-                Wargraphs, a gaming startup with only one employee and no
-                outside funding, sells for $54M
-              </h1>
-              <p>Ingrid Lunden</p>
-
-              <div class="break"></div>
-            </div>
-
-            <div class="individual-container">
-              <tag>Market Analysis</tag>
-              <h1>
-                Why every EV charging network combined can’t compete with Tesla
-              </h1>
-              <p>Tim De Chant</p>
-
-              <div class="break"></div>
-            </div>
-
-            <div class="individual-container">
-              <tag>Apps</tag>
-              <h1>
-                Hundreds of subreddits plan to go dark indefinitely after Reddit
-                CEO’s internal memo
-              </h1>
-              <p>Ivan Mehta</p>
-
-              <div class="break"></div>
-            </div>
-          </div>
-
-          <div class="row-one-col-three">
-            <div class="meet-container">
-              <div class="detail-container">
-                <h3>TechCrunch Disrupt</h3>
-                <div class="detail-container-date">
-                  <p>Sept 19-21 San</p>
-                  <p>Francisco, CA</p>
-                </div>
-              </div>
-
-              <p class="register">Register Now</p>
-            </div>
-          </div>
-        </div>
-        <!-- row-one ends  -->
-
-        <!-- 2nd row  -->
-        <div class="row-two-wrapper">
-          <!-- data-one  -->
-          <div class="row-two-container">
-            <!-- col-1  -->
-            <div class="row-two-col-1">
-              <tag>Biotech</tag>
-              <h1>
-                Investors say they have uncovered financial irregularities at
-                Mojocare
-              </h1>
-
-              <div class="row-two-details">
-                <h4>Kyle Wiggers</h4>
-                <p>12:30 PM GMT+5:30•June 19, 2023</p>
-              </div>
-            </div>
-
-            <!-- col-2  -->
-            <div class="row-two-col-2">
-              Màrius Montmany and Oriol Hernandez i Fajula, former employees at
-              large logistics companies, several years ago found themselves
-              frustrated with the problem of “reverse logistics” ̵...
-            </div>
-
-            <!-- col-3  -->
-            <!-- <div class="row-two-col-3"> -->
-            <img src="./assets/imgOne.webp" alt="" />
-            <!-- </div> -->
-          </div>
-
-          <!-- break line -->
-          <div class="break-line"></div>
-
-          <!-- data-one  -->
-          <div class="row-two-container">
-            <!-- col-1  -->
-            <div class="row-two-col-1">
-              <tag>Venture</tag>
-              <h1>
-                Seedstars, Fondation Botnar launch new fund to back African
-                startups focused on youth wellbeing
-              </h1>
-
-              <div class="row-two-details">
-                <h4>Kyle Wiggers</h4>
-                <p>12:30 PM GMT+5:30•June 19, 2023</p>
-              </div>
-            </div>
-
-            <!-- col-2  -->
-            <div class="row-two-col-2">
-              Seedstars Capital and Swiss philanthropic foundation Fondation
-              Botnar have launched Seedstars Youth Wellbeing Ventures, a $20
-              million investment mandate targeting early-stage startups in
-            </div>
-
-            <!-- col-3  -->
-            <!-- <div class="row-two-col-3"> -->
-            <img src="./assets/imageTwo.webp" alt="" />
-            <!-- </div> -->
-          </div>
-
-          <!-- break line -->
-          <div class="break-line"></div>
-
-          <!-- data-one  -->
-          <div class="row-two-container">
-            <!-- col-1  -->
-            <div class="row-two-col-1">
-              <tag>Biotech</tag>
-              <h1>
-                Mercedes jumps into the ChatGPT fray and Toyota plays catch-up
-              </h1>
-
-              <div class="row-two-details">
-                <h4>Kyle Wiggers</h4>
-                <p>12:30 PM GMT+5:30•June 19, 2023</p>
-              </div>
-            </div>
-
-            <!-- col-2  -->
-            <div class="row-two-col-2">
-              The Station is a weekly newsletter dedicated to all things
-              transportation. Sign up here — just click The Station — to receive
-              the full edition of the newsletter every weekend in your inbox.
-            </div>
-
-            <!-- col-3  -->
-            <!-- <div class="row-two-col-3"> -->
-            <img src="./assets/imageThree.webp" alt="" />
-            <!-- </div> -->
-          </div>
-
-          <!-- break line -->
-          <div class="break-line"></div>
-        </div>
-        <!-- 2nd row ends  -->
-
-        <!-- 3rd row  -->
-        <div class="row-techcrunch-label">
-          <img src="./assets/white-logo.jpeg" alt="" />
-          <div class="techcrunch-label-headings">
-            <h3>TechCrunch Disrupt 2020</h3>
-            <p>Sept 19-21</p>
-          </div>
-
-          <p class="techcrunch-label-content">
-            Hear from today's biggest names in tech, and explore the latest
-            startup development
-          </p>
-          <p>TechCrunch Disrupt</p>
-        </div>
-        <!-- 3rd row ends  -->
-
-        <footer>
-          <div class="footer-wrapper">
-            <div class="footer-container-one">
-              <div class="footer-info-col">
-                <h4>About</h4>
-                <li>TechCrunch</li>
-                <li>Staff</li>
-                <li>Contact Us</li>
-                <li>Advertise</li>
-                <li>Crunchboard Jobs</li>
-                <li>Site Maps</li>
-              </div>
-
-              <div class="footer-info-col">
-                <h4>Legal</h4>
-                <li>Terms of Service</li>
-                <li>Privacy Policy</li>
-                <li>TechCrunch+ Terms</li>
-                <li>Privacy Dashboard</li>
-                <li>Code of Conduct</li>
-                <li>About Our Ads</li>
-              </div>
-
-              <div class="footer-info-col">
-                <h4>Trending Tech Topics</h4>
-                <li>Tech Layoffs</li>
-                <li>ChatGPT</li>
-              </div>
-            </div>
-
-            <div class="footer-container-two">
-              <div class="footer-socials">
-                <div class="socials">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="1em"
-                    viewBox="0 0 320 512"
-                  >
-                    <path
-                      d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z"
-                    />
-                  </svg>
-                  <p>Facebook</p>
-                </div>
-
-                <div class="socials">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="1em"
-                    viewBox="0 0 576 512"
-                  >
-                    <path
-                      d="M549.655 124.083c-6.281-23.65-24.787-42.276-48.284-48.597C458.781 64 288 64 288 64S117.22 64 74.629 75.486c-23.497 6.322-42.003 24.947-48.284 48.597-11.412 42.867-11.412 132.305-11.412 132.305s0 89.438 11.412 132.305c6.281 23.65 24.787 41.5 48.284 47.821C117.22 448 288 448 288 448s170.78 0 213.371-11.486c23.497-6.321 42.003-24.171 48.284-47.821 11.412-42.867 11.412-132.305 11.412-132.305s0-89.438-11.412-132.305zm-317.51 213.508V175.185l142.739 81.205-142.739 81.201z"
-                    />
-                  </svg>
-                  <p>Youtube</p>
-                </div>
-
-                <div class="socials">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="1em"
-                    viewBox="0 0 448 512"
-                  >
-                    <path
-                      d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"
-                    />
-                  </svg>
-                  <p>Linkedin</p>
-                </div>
-              </div>
-
-              <div class="footer-socials">
-                <div class="socials">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="1em"
-                    viewBox="0 0 512 512"
-                  >
-                    <path
-                      d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z"
-                    />
-                  </svg>
-                  <p>Twitter</p>
-                </div>
-
-                <div class="socials">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="1em"
-                    viewBox="0 0 448 512"
-                  >
-                    <path
-                      d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"
-                    />
-                  </svg>
-                  <p>Instagram</p>
-                </div>
-
-                <div class="socials">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    height="1em"
-                    viewBox="0 0 448 512"
-                  >
-                    <path
-                      d="M433 179.11c0-97.2-63.71-125.7-63.71-125.7-62.52-28.7-228.56-28.4-290.48 0 0 0-63.72 28.5-63.72 125.7 0 115.7-6.6 259.4 105.63 289.1 40.51 10.7 75.32 13 103.33 11.4 50.81-2.8 79.32-18.1 79.32-18.1l-1.7-36.9s-36.31 11.4-77.12 10.1c-40.41-1.4-83-4.4-89.63-54a102.54 102.54 0 0 1-.9-13.9c85.63 20.9 158.65 9.1 178.75 6.7 56.12-6.7 105-41.3 111.23-72.9 9.8-49.8 9-121.5 9-121.5zm-75.12 125.2h-46.63v-114.2c0-49.7-64-51.6-64 6.9v62.5h-46.33V197c0-58.5-64-56.6-64-6.9v114.2H90.19c0-122.1-5.2-147.9 18.41-175 25.9-28.9 79.82-30.8 103.83 6.1l11.6 19.5 11.6-19.5c24.11-37.1 78.12-34.8 103.83-6.1 23.71 27.3 18.4 53 18.4 175z"
-                    />
-                  </svg>
-                  <p>Mastodon</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <p class="copyright">
-            © 2023 Yahoo.All rights reserved.Powered by
-            <a
-              href="https://wpvip.com/?utm_source=vip_powered_wpcom&utm_medium=web&utm_campaign=VIP%20Footer%20Credit%2F"
-              >WordPress VIP</a
-            >
-          </p>
-        </footer>
-      </div>
-      <!-- 2nd container ends  -->
+        <tbody id="tbody"></tbody>
+      </table>
     </div>
 
-    <script
-      src="https://kit.fontawesome.com/yourcode.js"
-      crossorigin="anonymous"
-    ></script>
-    <script src="./js/script.js"></script>
+    <script src="./script.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.3.js"></script>
+    <script src="lodash.js"></script>
+
+    <script src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <!-- <script src="https://cdn.datatables.net/1.13.4/css/dataTables.bootstrap5.min.css"></script> -->
+    <!-- <script src="https://cdn.datatables.net/1.10.16/js/dataTables.bootstrap5.min.js"></script> -->
   </body>
 </html>
