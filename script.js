@@ -1,5 +1,3 @@
-// const _ = require("lodash");
-
 async function getDataTwo() {
   const result = await fetch("https://dummyjson.com/users");
   const data = await result.json();
